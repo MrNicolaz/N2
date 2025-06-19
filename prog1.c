@@ -31,7 +31,7 @@ void inserir_registro(SensorInfo *sensor, Registro reg) {
         sensor->capacidade *= 2;
         sensor->dados = realloc(sensor->dados, sizeof(Registro) * sensor->capacidade);
         if (!sensor->dados) {
-        fprintf(stderr, "Erro de memória para sensor %s\n", sensor->id);
+        fprintf(stderr, "Erro de memoria para sensor %s\n", sensor->id);
         exit(1);
         }
     }sensor->dados[sensor->qtd++] = reg;
@@ -109,7 +109,7 @@ int main(int argc, char *argv[]) {
         int pos = acha_sensor(sensores, total_sens, id);
         if (pos == -1) {
             if (total_sens >= MAX_SENS) {
-            fprintf(stderr, "Limite de sensores excedido.\n");
+            fprintf(stderr, "Limite de sensores atingido.\n");
             break;
             }
             pos = total_sens++;
@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
             sensores[pos].qtd = 0;
             sensores[pos].capacidade = INICIAL_CAP;
             if (!sensores[pos].dados) {
-            fprintf(stderr, "Falha na alocaçao.\n");
+            fprintf(stderr, "Falha na alocacao.\n");
             fclose(entrada);
             return 4;
             }

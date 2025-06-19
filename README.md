@@ -24,8 +24,8 @@ gcc -o prog2.exe prog2.c     // Consulta os dados por timestamp
 
 # Execução sugerida:
 
-.\prog3.exe 01:06:2025 16:06:2025 CONJ_Z:sensorA CONJ_Q:sensorB TEXTO:sensorC BINARIO:sensorD
+.\prog3.exe 01:06:2025 16:06:2025 CONJ_Z:TEMP CONJ_Q:PRES TEXTO:VIBR BINARIO:UMID
 
 .\prog1.exe dados_teste.txt
 
-.\prog2.exe sensorA "2025-06-10 15:30:00
+.\prog2.exe TEMP "2025-06-10 15:30:00"

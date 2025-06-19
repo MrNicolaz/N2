@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
     int total_dados = 0;
     Entrada *dados = ler_arquivo(arquivo, &total_dados);
     if (!dados) {
-        fprintf(stderr, "Não foi possível abrir o arquivo do sensor '%s'\n", argv[1]);
+        fprintf(stderr, "Não foi possivel abrir o arquivo do sensor '%s'\n", argv[1]);
         return 2;
     }
 
@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
 
     long ts_alvo = converter_data_para_ts(argv[2]);
     if (ts_alvo == -1) {
-        fprintf(stderr, "Formato de data invalido. Use 'AAAA-MM-DD HH:MM:SS'\n");
+        fprintf(stderr, "Formato de data invalido. Use 'ANO-MES-DIA HH:MM:SS'\n");
         free(dados);
         return 4;
     }
